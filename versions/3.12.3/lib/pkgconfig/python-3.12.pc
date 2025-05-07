@@ -1,0 +1,13 @@
+# See: man pkg-config
+prefix=/home/ecua/pyenv/versions/3.12.3
+exec_prefix=${prefix}
+libdir=/home/ecua/pyenv/versions/3.12.3/lib
+includedir=${prefix}/include
+
+Name: Python
+Description: Build a C extension for Python
+Requires:
+Version: 3.12
+Libs.private: -lpthread -ldl -L/home/ecua/pyenv/versions/3.12.3/lib -Wl,-rpath,/home/ecua/pyenv/versions/3.12.3/lib -lutil
+Libs: -L${libdir} 
+Cflags: -I${includedir}/python3.12
